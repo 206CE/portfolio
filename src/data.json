@@ -1,0 +1,31 @@
+{
+  "title": "CE206",
+  "description": "Showcasing scalable design systems, interactive motion, and polar magic.",
+  "openGraph": {
+    "title": "Jaco’s Portfolio",
+    "description": "Scalable design meets aurora aesthetics",
+    "url": "",
+    "siteName": "Jaco’s Creations",
+    "images": [
+      {
+        "url": "/og-image.jpg",
+        "width": 1200,
+        "height": 630,
+        "alt": "Aurora banner"
+      }
+    ],
+    "type": "website"
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Jaco’s Aurora Portfolio",
+    "description": "Animated brilliance meets precision coding.",
+    "creator": "@jaco_dev",
+    "images": ["/og-image.jpg"]
+  },
+  "icons": {
+    "icon": [
+      { "url": "/Logo.png" }
+    ]
+  }
+}

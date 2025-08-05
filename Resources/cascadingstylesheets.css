@@ -1,0 +1,31 @@
+line-height
+list-style-type:circle;disc;decimal;
+list-style-position:inside;outside;
+list-style-image:url('image.png');
+
+
+margin-bottom:1em;
+
+LINKS
+
+:hover
+:visited
+:focus
+:active
+:link
+
+background-size:cover;
+background-repeat:no-repeat;
+background-position:center;
+background-attachment:fixed;
+background-image:url('image.jpg');
+background: norepeat center center fixed url('image.jpg');
+
+Borders
+
+border :1px solid black;
+border-radius:5px;
+border-style:dashed;
+
+linear-gradient()
+radial-gradient()

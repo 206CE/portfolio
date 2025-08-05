@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+
+:root {
+  /* Backgrounds/Surfaces */
+  
+  --background: #0A0A10;           /* Deep Space Black */
+  --surface: ;              /* Dark Steel Panel */
+  
+  
+  --bg-primary: #0A0A10;
+  --bg-secondary: #12121D;
+  --bg-tertiary: #1C1C27;
+  --bg-hover: ;
+  --bg-inverted: ;
+  --bg-overlay: ;
+
+
+  /* === Borders & Dividers === */
+  --border: rgba(255, 255, 255, 0.1);
+  --divider: rgba(255, 255, 255, 0.05);
+
+  /* === Glows & Effects === */
+  --glow-sun: rgba(255, 107, 53, 0.4);
+  --glow-tech: rgba(79, 131, 202, 0.3);
+  --glass-overlay: rgba(255, 255, 255, 0.05); /* Futuristic glass effect */
+  
+  /* Brand Colors */
+
+  --sun-core: #FF3E3E;             /* Red-Hot Core */
+  --sun-inner-glow: #FF6B35;       /* Orange Plasma */
+  --sun-outer-glow: #FFD166;       /* Solar Flare Yellow */
+
+  --tech-panel: ;           /* Matte Black Alloy */
+  --tech-accent: #4F83CA;          /* High-Energy Blue */
+  --tech-hologram: #7DB9E8;        /* Holo-Cyan Glow */
+  --tech-wire: #F2E205;            /* Energy Conduit Gold */
+
+  --primary: ;
+  
+  --primary-light: ;
+  --primary-dark: ;
+
+  --secondary: ;
+  
+  --secondary-light: ;
+  --secondary-dark: ;
+
+  --tertiary: ;
+
+  --tertiary-light: ;
+  --tertiary-dark: ;
+
+  --accent: ;
+
+  --accent-light: ;
+  --accent-dark: ;
+
+  /* Feedback colors */
+  
+    --success: #7ED321;              /* Green = System Stable */
+    --warning: #FFA700;              /* Warning / Caution Mode */
+    --error: #FF3B30;                /* Error / Critical Alert */
+    --info: ;
+
+    /* Typography */
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #AAAAAA;
+  --text-tertiary: #666666;
+  --text-disabled: ;
+  --text-inverted: ;
+  --text-link: ;
+  --text-link-hover: ;
+
+/* Interactive Elements */
+
+    /* === Hover States & Variants === */
+  --primary-hover: #E6B95C;
+  --secondary-hover: #3D6BC0;
+  --accent-hover: #E05A2C;
+  /* === UI & Interactive Elements === */
+  --primary: #FFD166;              /* Main UI Highlight (Solar Yellow) */
+  --secondary: #4F83CA;            /* Secondary UI (Plasma Blue) */
+  --accent: #FF6B35;               /* Accent UI (Flame Orange) */
+
+  --btn-bg: var(--color-primary);
+  --btn-text: var(--color-white);
+  --btn-hover-bg: var(--color-primary-dark);
+  --btn-disabled-bg: var(--color-gray-300);
+  --btn-disabled-text: var(--color-gray-500);
+
+  --input-bg: var(--color-white);
+  --input-border: var(--color-gray-300);
+  --input-focus: var(--color-primary);
+  --input-placeholder: var(--color-gray-400);
+
+
+  
+}
+
+.btn {
+  background-color: var(--bg-primary);
+  color:var(--primary);  
+  transition: transform 300ms ease;
+  transform: translate(0);
+}
+
+.btn:hover {
+  color:var(--primar-hover);
+  transform: scale(1.10) translate(0);
+}
+
+.dark {
+  --background: #0A0A10;
+  --surface: #12121D;
+  --glass-overlay: rgba(255, 255, 255, 0.05);
+
+  --sun-core: #FF3E3E;
+  --sun-inner-glow: #FF6B35;
+  --sun-outer-glow: #FFD166;
+
+  --tech-panel: #1C1C27;
+  --tech-accent: #4F83CA;
+  --tech-hologram: #7DB9E8;
+}
+
+@theme inline {
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hover-able {
+
+}
+
+.hover-able:hover {
+  
+}
