@@ -1,25 +1,27 @@
-/* 0.1.0
+/* 1.0.0
 
-    > JSX not recognized in typescript "jsx":"react-jsx" in tsconfig.json file
 
 */
 
-import { ReactNode } from "react";
-
-
+import React, {ElementType} from "react";
 
 type ContainerProps = {
-    children:ReactNode;
-    as?: keyof JSX.IntrinsicElements;
-    className?:string;
+  children: React.ReactNode;
+  className?: string;
+  as?: ElementType; // Optional tag (div, section, main, etc.)
 };
 
-export default function Container({
-    children,
-    as = 'div',
-    className='',
-}:ContainerProps)
-{
-    const Tag = as;
-    return <Tag className={className}>{children}</Tag>
+function Container({
+  children,
+  className = "",
+  as: Tag = "div",
+}: ContainerProps) {
+  return (
+    <Tag className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>
+      {children}
+    </Tag>
+  );
 }
+
+export default Container;
+

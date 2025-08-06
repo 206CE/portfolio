@@ -17,12 +17,19 @@ const space = Space_Mono({
   weight: "400",
 });
 
-/* COMPONENTS */
+/* LAYOUTS */
+import Container from "@/Components/Layout/Container";
+
+/* CONTENTS */
 import Logo from "../Components/Content/Logo";
+import ContactInfo from "@/Components/Content/ContactInfo";
+
+/* CTA */
+import Cta from "../Components/Ctas/Cta";
+
+/* NAV */
 import Navigation from "../Components/Nav/Navigation";
 import Social from "../Components/Nav/Social";
-import Cta from "../Components/Ctas/Cta";
-import ContactInfo from "@/Components/Content/ContactInfo";
 
 const nItems = [
   { label: "Home", href: "/" },
@@ -39,7 +46,6 @@ const social = [
   "https://www.linkedin.com/in/jaco-botha-886b7b95/",
   "https://www.facebook.com/jaco.botha.12139",
 ];
-
 
 /* App router SEO  */
 export const metadata = {
@@ -72,8 +78,6 @@ export const metadata = {
   },
 };
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -84,9 +88,12 @@ export default function RootLayout({
       <body className={`${syne.className} ${space.className} antialiased`}>
         {/*BACKGROUND*/}
         <div className="absolute inset-0 -z-10 bg-(--background)"></div>
-        
+
         {/* HEADER */}
-        <header className="flex flex-row gap-6 justify-between mx-2 items-center ">
+        <Container
+          as={"header"}
+          className="flex flex-row gap-6 justify-between mx-2 items-center"
+        >
           {/* LOGO */}
           <Logo text="CE_206..." size={50} imagePath="/Logo.png" />
 
@@ -112,24 +119,24 @@ export default function RootLayout({
           {/* ACCESSABILTY */}
 
           {/* ANOUNCE */}
-        </header>
+        </Container>
         {children}
         {/* FOOTER */}
-        <footer>
-          {/* PRIVACY */}
-          {/* TERMS */}
-          {/* TRUST (badges)*/}
-          {/* NEWS */}
-          {/* SOCIAL */}
+        <Container as={"footer"}>
+            {/* PRIVACY */}
+            {/* TERMS */}
+            {/* TRUST (badges)*/}
+            {/* NEWS */}
+            {/* SOCIAL */}
             <Social linkStyle="btn" urls={social} />
-          {/* CONTACTINFO */}
-          <ContactInfo
-            cellphone="+27(0)79 497 2646"
-            email="jacobotha206@gmail.com"
-          />
-          {/* COPY */}
-          {/* MINIABOUT */}
-        </footer>
+            {/* CONTACTINFO */}
+            <ContactInfo
+              cellphone="+27(0)79 497 2646"
+              email="jacobotha206@gmail.com"
+            />
+            {/* COPY */}
+            {/* MINIABOUT */}
+        </Container>
       </body>
     </html>
   );

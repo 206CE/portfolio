@@ -84,9 +84,10 @@
   --secondary: #4F83CA;            /* Secondary UI (Plasma Blue) */
   --accent: #FF6B35;               /* Accent UI (Flame Orange) */
 
-  --btn-bg: var(--color-primary);
-  --btn-text: var(--color-white);
+  --btn-bg: var(--bg-primary);
+  --btn-text: var(--primary);
   --btn-hover-bg: var(--color-primary-dark);
+  --btn-hover-text: var(--primary-hover)
   --btn-disabled-bg: var(--color-gray-300);
   --btn-disabled-text: var(--color-gray-500);
 
@@ -100,14 +101,14 @@
 }
 
 .btn {
-  background-color: var(--bg-primary);
-  color:var(--primary);  
+  background-color: var(--btn-bg);
+  color:var(--btn-text);  
   transition: transform 300ms ease;
   transform: translate(0);
 }
 
 .btn:hover {
-  color:var(--primar-hover);
+  color:var(--btn-hover-text);
   transform: scale(1.10) translate(0);
 }
 
@@ -125,9 +126,7 @@
   --tech-hologram: #7DB9E8;
 }
 
-@theme inline {
 
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -140,12 +139,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.hover-able {
-
-}
-
-.hover-able:hover {
-  
 }

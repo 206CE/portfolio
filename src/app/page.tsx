@@ -1,16 +1,26 @@
 
-/* COMPONENTS */
+/* LAYOUT */
+
+
+/* CTA */
 import Hero from "../Components/Ctas/Hero";
+
+
+/* CONTENT */
 import FeatureList from "@/Components/Content/FeatureList";
 import About from "@/Components/Content/About";
 import Testify from "@/Components/Content/Testify";
 import Faq from "@/Components/Content/Faq";
 
+/* COMPONENTS */
+
+
 
 export default function Home() {
   return (
     <main className="flex flex-col justify-center text-center">
-      <section className="justify-center">
+
+      <section className="justify-'center">
         {/* HERO */}
         <Hero
           title="CE  206"

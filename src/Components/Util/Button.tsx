@@ -1,7 +1,7 @@
 
-{/* 0.1.0
+{/* 1.0.0
 
-    Testing
+    Icons untested
     
     */}
 
@@ -40,7 +40,7 @@ const sizeStyles: Record<ButtonSize, string> = {
   lg: "px-5 py-3 text-lg",
 };
 
-export const CustomButton: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   children,
   variant = "primary",
   size = "md",
