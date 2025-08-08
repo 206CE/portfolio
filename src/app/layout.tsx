@@ -55,6 +55,8 @@ export const metadata = {
   openGraph: {
     title: "206_CE Technologies",
     description: "Scalable technologies",
+    keywords: "",
+    author: "",
     url: "https://206ce.github.io",
     siteName: "206_CE",
     images: [

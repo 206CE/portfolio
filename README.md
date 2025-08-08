@@ -27,3 +27,7 @@ Enhancements:
    > /app/var/seo.json
    > /app/var/font.json
    > Upgrade Container.tsx to allow custom background additions.
+   > Update globals.css file <- aurora
+   > Testify.tsx: anchor to link, customize links option styling.
+   > Contacts.tsx: Submit button styling to btn , Success or fail feedback.
+   
