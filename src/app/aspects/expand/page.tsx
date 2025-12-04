@@ -63,7 +63,7 @@ const benefitsD: Benefit[] = [
   },
 ];
 
-export default function WebDevelopment() {
+export default function Expand() {
   return (
     <div className="text-(--primary) p-10">
       <section className="flex"></section>

@@ -19,71 +19,66 @@ import Faq from "@/Components/Content/Faq";
 export default function Home() {
   return (
     <main className="flex flex-col justify-center text-center">
-
-      <section className="justify-'center">
+      <section className="justify-center">
         {/* HERO */}
         <Hero
           title="CE  206"
           tagline="One number, many forms."
-          ctas={[{ label: "Contact Us", href: "/Contact" }]}
+          ctas={[{ label: "Contact Us", href: "/contact" }]}
           itemformat=" btn text-2xl p-2  mr-10 font-bold border"
           imageSrc="/Logo.png"
           imageSize={500}
           imageAlt="Picture of Logo, a hexa-devided star."
         />
       </section>
-      {/* FEATURES */}
+      {/* FEATURES : Our Content*/}
       <section>
         <FeatureList
-          heading="Heading"
-          subheading="Subheading"
+          heading="Our Content"
+          subheading="We strive for completeness..."
           features={[
             {
-              title: "title",
-              description: "description",
-              icon: "fdas",
-              imageUrl: "/Logo.png",
-              imageSize: 10,
-              link: { label: "label", href: "/" },
+              title: "Secure",
+              description: "The stuff we have",
+              icon: "",
+              imageUrl: "/The_Human_Way/Protector_Dark.png",
+              imageSize: 100,
+              link: { label: "More ...", href: "/aspects/secure" },
+            },
+            {
+              title: "Expand",
+              description: "The stuff we seek",
+              icon: "",
+              imageUrl: "/The_Human_Way/Hunter_Dark.png",
+              imageSize: 100,
+              link: { label: "More ...", href: "/aspects/expand" },
+            },
+            {
+              title: "Gather",
+              description: "The stuff we get",
+              icon: "",
+              imageUrl: "/The_Human_Way/Gatherer_Dark.png",
+              imageSize: 100,
+              link: { label: "More ...", href: "/aspects/gather" },
+            },
+            {
+              title: "Adapt",
+              description: "The stuff we get better at",
+              icon: "",
+              imageUrl: "/The_Human_Way/Adapter_Dark.png",
+              imageSize: 100,
+              link: { label: "More ...", href: "/aspects/adapt" },
             },
           ]}
           layout="grid"
-          columns={1}
+          columns={4}
         />
       </section>
-      {/* ABOUT */}
-      <About
-        companyName="206CE"
-        tagline="Compute Everything"
-        description="At 206_CE, we believe the future belongs to energy—not matter. Inspired by the Sun, the source of all terrestrial life, we build technologies that convert light into logic, and logic into life. We do not chase ownership—we pursue efficiency. We do not build empires—we architect convergence. Our systems are designed to preserve life, because life is the only source of meaning. In a world where everything becomes code, and every code becomes light, we compute the Sun."
-        mission="206_CE exists to compute everything—designing systems that convert light into life, logic into meaning, and energy into sustainable futures. We build tools not for ownership, but for efficiency. Not for profit, but for preservation."
-        vision="To architect the convergence of computation, biology, and energy—transforming code into consciousness and corporations into radiant waveforms."
-        values={[
-          "Preservation, of Life.",
-          "Convergence, of goals.",
-          "Computation, of Everything.",
-        ]}
-      />
+      {/* ABOUT  /about/page.tsx */}
+
       {/* PORTFOLIO */}
-      {/* TESTIMONIALS */}
-      <Testify
-        heading="What our customers say..."
-        subheading="subheading"
-        testimonials={[
-          {
-            name: "name",
-            role: "role",
-            message: "message",
-            avatarUrl: "/logo1.png",
-            company: "company",
-            companyLogoUrl: "/logo1.png",
-            link: "/",
-            linkText: "Go to Page",
-          },
-        ]}
-        layout="carousel"
-        background="bg-(--bg-primary)"
-      />
+      {/* TESTIMONIALS /customers/page.tsx*/}
+
       {/* BLOG (preview) */}
       {/* STATS/MILESTONES */}
       {/* VIDEO/MEDIA */}

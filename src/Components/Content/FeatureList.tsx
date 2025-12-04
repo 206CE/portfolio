@@ -72,7 +72,7 @@ export default function FeatureList({
               <Image
                 src={feature.imageUrl}
                 alt={feature.title}
-                className="w-full h-40 object-cover  mb-4"
+                className="object-cover  mb-4"
                 height={feature.imageSize || 50}
                 width={feature.imageSize || 50}
               />
@@ -84,7 +84,7 @@ export default function FeatureList({
             {feature.link && (
               <a
                 href={feature.link.href}
-                className="mt-auto g-(--btn-bg) text-(--btn-text) hover:bg-(--btn-hover-bg) font-medium b"
+                className="btn mt-auto font-medium b"
               >
                 {feature.link.label} 
               </a>

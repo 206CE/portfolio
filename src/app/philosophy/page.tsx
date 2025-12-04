@@ -1,17 +1,22 @@
-
-import Cards from '@/Components/Util/_Cards'
-import About from '@/Components/Content/About';
+import Cards from "@/Components/Util/_Cards";
+import About from "@/Components/Content/About";
+import FeatureList from "@/Components/Content/FeatureList";
 
 const cards = [
-  {id:1,
-    name:"Jaco Botha",
-    subName:"CEO",
-    description: ['7+ Years Teaching','7+ Years IT Operations','1+ Years Solution Architect'],
-    imageUrl:'/My_Pic.jpg',
-    imageAlt:'Jaco Botha smilling',
-    imageSize: 50
-  }
-]
+  {
+    id: 1,
+    name: "Jaco Botha",
+    subName: "CEO",
+    description: [
+      "7+ Years Teaching",
+      "7+ Years IT Operations",
+      "1+ Years Solution Architect",
+    ],
+    imageUrl: "/My_Pic.jpg",
+    imageAlt: "Jaco Botha smilling",
+    imageSize: 500,
+  },
+];
 
 export default function AboutPage() {
   return (
@@ -26,6 +31,84 @@ export default function AboutPage() {
           "Preservation, of Life.",
           "Convergence, of goals.",
           "Computation, of Everything.",
+        ]}
+      />
+      <FeatureList
+        heading="Our Philosophy"
+        subheading="If we cant create it, we dont understand it - Richard Fynneman"
+        layout="grid"
+
+        features={[
+          {
+            title: "Ontology",
+            description: "What is real?",
+            icon: "",
+            imageUrl: "/Philosopy/Ontology.png",
+            imageSize: 100,
+          },
+          {
+            title: "Cosmology",
+            description: "Where does it all come from?",
+            icon: "",
+            imageUrl: "/Philosopy/Cosmology.png",
+            imageSize: 100,
+          },
+          {
+            title: "Anthropology",
+            description: "What are human beings?",
+            icon: "",
+            imageUrl: "/Philosopy/Anthropology.png",
+            imageSize: 100,
+          },
+          {
+            title: "Epistemology",
+            description: "How do you know the truth?",
+            icon: "",
+            imageUrl: "/Philosopy/Epistemology.png",
+            imageSize: 100,
+          },
+          {
+            title: "Ethics",
+            description: "What is right and wrong?",
+            icon: "",
+            imageUrl: "/Philosopy/Ethics.png",
+            imageSize: 100,
+          },
+          {
+            title: "Purpose",
+            description: "What is the meaning of life?",
+            icon: "",
+            imageUrl: "/Philosopy/Purpose.png",
+            imageSize: 100,
+          },
+          {
+            title: "Soteriology",
+            description: "What is wrong with the world?",
+            icon: "",
+            imageUrl: "/Philosopy/Soteriology.png",
+            imageSize: 100,
+          },
+          {
+            title: "Eschatology",
+            description: "What does the future hold?",
+            icon: "",
+            imageUrl: "/Philosopy/Eschatology.png",
+            imageSize: 100,
+          },
+          {
+            title: "Axiology",
+            description: "What is worth pursuing?",
+            icon: "",
+            imageUrl: "/Philosopy/Axiology.png",
+            imageSize: 100,
+          },
+          {
+            title: "Practice",
+            description: "How is our view lived?",
+            icon: "",
+            imageUrl: "/Philosopy/Practice.png",
+            imageSize: 100,
+          },
         ]}
       />
       <Cards cards={cards} />

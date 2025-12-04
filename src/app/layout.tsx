@@ -34,12 +34,17 @@ import Social from "../Components/Nav/Social";
 const nItems = [
   { label: "Home", href: "/" },
   {
-    label: "Services",
-    dropdown: [{ label: "Web Development", href: "/Services/web-development" }],
+    label: "Aspects",
+    dropdown: [
+      { label: "Secure", href: "/aspects/secure" },
+      { label: "Expand", href: "/aspects/expand" },
+      { label: "Gather", href: "/aspects/gather" },
+      { label: "Adapt", href: "/aspects/adapt" },
+    ],
   },
-  { label: "About", href: "/About" },
-  { label: "Customers", href: "/Customers" },
-  { label: "Contact", href: "/Contact" },
+  { label: "Philosophy", href: "/philosophy" },
+  { label: "Customers", href: "/customers" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const social = [
@@ -89,12 +94,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${syne.className} ${space.className} antialiased`}>
         {/*BACKGROUND*/}
-        <div className="absolute inset-0 -z-10 bg-(--background)"></div>
+        <div className="bg-(--background)"></div>
 
         {/* HEADER */}
         <Container
           as={"header"}
-          className="flex flex-row gap-6 justify-between mx-2 items-center"
+          className="flex flex-row fixed w-full left-0 gap-6 justify-between items-center bg-(--bg-primary) mb-20"
         >
           {/* LOGO */}
           <Logo text="CE_206..." size={50} imagePath="/Logo.png" />
@@ -102,13 +107,13 @@ export default function RootLayout({
           {/* NAV */}
           <Navigation
             items={nItems}
-            itemClassName="btn p-4 md:p-2 md:text-xl lg:text-2xl "
+            itemClassName="btn p-4 md:p-2 md:text-xl lg:text-2xl"
           />
 
           {/* CTA */}
           <Cta
-            ctas={[{ label: "Get a Quote", href: "/Contact" }]}
-            itemClassFormat="hidden lg:block text-(--primary) text-1xl p-2  btn mr-10 font-bold border"
+            ctas={[{ label: "Get a Quote", href: "/contact" }]}
+            itemClassFormat="btn hidden lg:block text-1xl p-2   mr-10 font-bold border"
           />
 
           {/* SEARCH */}
@@ -117,27 +122,30 @@ export default function RootLayout({
 
           {/* CART */}
 
+          {/* LIGHT/DARK */}
+          
           {/* LANG */}
           {/* ACCESSABILTY */}
 
           {/* ANOUNCE */}
         </Container>
+        <div className="p-10"></div>
         {children}
         {/* FOOTER */}
         <Container as={"footer"}>
-            {/* PRIVACY */}
-            {/* TERMS */}
-            {/* TRUST (badges)*/}
-            {/* NEWS */}
-            {/* SOCIAL */}
-            <Social linkStyle="btn" urls={social} />
-            {/* CONTACTINFO */}
-            <ContactInfo
-              cellphone="+27(0)79 497 2646"
-              email="jacobotha206@gmail.com"
-            />
-            {/* COPY */}
-            {/* MINIABOUT */}
+          {/* PRIVACY */}
+          {/* TERMS */}
+          {/* TRUST (badges)*/}
+          {/* NEWS */}
+          {/* SOCIAL */}
+          <Social linkStyle="btn" urls={social} />
+          {/* CONTACTINFO */}
+          <ContactInfo
+            cellphone="+27(0)79 497 2646"
+            email="jacobotha206@gmail.com"
+          />
+          {/* COPY */}
+          {/* MINIABOUT */}
         </Container>
       </body>
     </html>

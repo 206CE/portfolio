@@ -1,6 +1,8 @@
 {/* 1.0.4
   
  
+  CSS:
+    text-(--text-primary)
 
   
   */}
@@ -31,7 +33,7 @@ export default function Logo({ text, imagePath = "/Logo.png", size, href='/' }: 
           style={{ width: size, height: size }}
           priority
         />
-        <span className="shrink-0">{text}</span>
+        <span className="text-(--text-primary) shrink-0">{text}</span>
         </div>
       </Link>
     </div>

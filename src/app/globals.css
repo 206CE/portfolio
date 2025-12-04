@@ -76,7 +76,7 @@
 /* Interactive Elements */
 
     /* === Hover States & Variants === */
-  --primary-hover: #E6B95C;
+  --primary-hover: #ca3232;
   --secondary-hover: #3D6BC0;
   --accent-hover: #E05A2C;
   /* === UI & Interactive Elements === */
@@ -108,7 +108,7 @@
 }
 
 .btn:hover {
-  color:var(--btn-hover-text);
+  color:var(--primary-hover);
   transform: scale(1.10) translate(0);
 }
 
@@ -136,7 +136,7 @@
 }
 
 body {
-  background: var(--background);
+  background: var(--bg-primary);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }

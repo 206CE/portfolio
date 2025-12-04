@@ -1,8 +1,8 @@
-/* 1.0.2
+/* 1.0.3
 
   CSS:
   --text-primary
-  --primary
+  --text-tertiary
   --text-secondary
 
 */
@@ -56,7 +56,7 @@ const Hero: React.FC<HeroProps> = ({
         />
         </div>
       )}</div>
-        <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r pb-2 from-(--text-primary) via-(--text-muted) to-(--text-secondary) bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r pb-2 from-(--text-primary) via-(--text-tertiary) to-(--text-secondary) bg-clip-text text-transparent">
           {title}
         </h1>
 
@@ -68,7 +68,7 @@ const Hero: React.FC<HeroProps> = ({
           <ul className="mt-6 flex justify-center gap-4 flex-wrap">
             {(ctas ?? []).map((cta, idx) => (
               <Link key={idx} href={cta.href} className="transition duration-300 transform hover:scale-110">
-                <li className={`px-6 py-2  text-(--primary) ${itemformat}`}>
+                <li className={`px-6 py-2  text-(--text-primary) ${itemformat}`}>
                   {cta.label}
                 </li>
               </Link>

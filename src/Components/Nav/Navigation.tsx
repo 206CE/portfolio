@@ -1,4 +1,4 @@
-/* 1.0.0
+/* 1.0.1
 
 
   Explanation:
@@ -8,13 +8,6 @@
    { label: "service1", href: "/sarvice1" }
     ]},];
 
-CSS:
-  --surface
-  --border
-  --accent-one
-  --accent-two
-  --text-primary
-  --primary-hover
 */
 
 
@@ -46,7 +39,7 @@ export default function Navigation({ items, itemClassName = "" }: NavigationProp
 
   const renderItem = (item: NavItem, closeOnClick = false) =>
     item.dropdown ? (
-      <Menu as="div" key={item.label} className="relative">
+      <Menu as="nav" key={item.label} className="relative">
         <MenuButton className={`cursor-pointer ${commonLinkClass}`}>
           {item.label}
           <FaChevronDown className=" mt-2 ml-2 h-4 w-4" aria-hidden="true" />
@@ -60,7 +53,7 @@ export default function Navigation({ items, itemClassName = "" }: NavigationProp
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <MenuItems className="absolute z-50  w-max bg-(--surface) shadow-md border border-(--border) cursor-pointer">
+          <MenuItems className="absolute z-50  w-max cursor-pointer">
             {item.dropdown.map((drop) => (
               <MenuItem key={drop.label}>
                 <Link
@@ -100,7 +93,7 @@ export default function Navigation({ items, itemClassName = "" }: NavigationProp
 
       {/* Hamburger */}
       <button
-        className="md:hidden fixed top-4 right-4 z-10 p-2 rounded-md bg-[var(--accent-one)] hover:bg-[var(--accent-two)] text-(--text-primary)"
+        className={`md:hidden fixed top-4 right-4 z-10 p-2 cursor-pointer ${commonLinkClass}`}
         onClick={() => setOpen(!open)}
         aria-label="Toggle menu"
       >
@@ -108,11 +101,13 @@ export default function Navigation({ items, itemClassName = "" }: NavigationProp
       </button>
 
       {/* Overlay */}
-      {open && <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />}
+      {open && (
+        <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />
+      )}
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 z-50 w-64 h-full bg-(--surface) text-(--text-primary) shadow-lg transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 z-50 w-64 h-full transform transition-transform duration-300 ease-in-out ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
