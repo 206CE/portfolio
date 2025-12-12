@@ -1,7 +1,41 @@
-/* STYLES */
+/* SEO */
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "206ce",
+  description: "Computer technology for the future.",
+  metadataBase: new URL("https://206ce.github.io"),
+  openGraph: {
+    type: "website",
+    url: "https://206ce.github.io",
+    title: "206_CE Technologies",
+    description: "Scalable technologies",
+    siteName: "206_CE",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "206CE Banner",
+      },
+    ],
+    
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@", // Your Twitter handle
+    description: "Website development",
+    images: ["/og-image.jpg"],
+  },
+  icons: {
+    icon: "/Logo.png",
+  },
+};
+
+/* CSS */
 import "./globals.css";
 
-/* FONTS */
+/* FONT */
 import { Syne_Mono } from "next/font/google";
 import { Space_Mono } from "next/font/google";
 
@@ -17,10 +51,10 @@ const space = Space_Mono({
   weight: "400",
 });
 
-/* LAYOUTS */
+/* LAYOUT */
 import Container from "@/Components/Layout/Container";
 
-/* CONTENTS */
+/* CONTENT */
 import Logo from "../Components/Content/Logo";
 import ContactInfo from "@/Components/Content/ContactInfo";
 
@@ -52,38 +86,7 @@ const social = [
   "https://www.facebook.com/jaco.botha.12139",
 ];
 
-/* App router SEO  */
-export const metadata = {
-  title: "206ce",
-  description: "Computer technology for the future.",
-  metadataBase: new URL("https://206ce.github.io"),
-  openGraph: {
-    title: "206_CE Technologies",
-    description: "Scalable technologies",
-    keywords: "",
-    author: "",
-    url: "https://206ce.github.io",
-    siteName: "206_CE",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "206CE Banner",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@", // Your Twitter handle
-    description: "Website development",
-    images: ["/og-image.jpg"],
-  },
-  icons: {
-    icon: "/Logo.png",
-  },
-};
+
 
 export default function RootLayout({
   children,

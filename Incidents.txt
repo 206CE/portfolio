@@ -1,0 +1,15 @@
+BUILD:
+
+Warning: Found multiple lockfiles. Selecting /home/roach/package-lock.json.
+   Consider removing the lockfiles at:
+   * /home/roach/Projects/sites/portfolio/pnpm-lock.yaml
+
+./src/app/blog/[slug]/page.tsx
+8:7  Error: 'components' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/page.tsx
+11:8  Error: 'About' is defined but never used.  @typescript-eslint/no-unused-vars
+12:8  Error: 'Testify' is defined but never used.  @typescript-eslint/no-unused-vars
+
+BUGS:
+

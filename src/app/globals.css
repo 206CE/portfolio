@@ -2,68 +2,7 @@
 
 
 :root {
-  /* Backgrounds/Surfaces */
-  
-  --background: #0A0A10;           /* Deep Space Black */
-  --surface: ;              /* Dark Steel Panel */
-  
-  
-  --bg-primary: #0A0A10;
-  --bg-secondary: #12121D;
-  --bg-tertiary: #1C1C27;
-  --bg-hover: ;
-  --bg-inverted: ;
-  --bg-overlay: ;
-
-
-  /* === Borders & Dividers === */
-  --border: rgba(255, 255, 255, 0.1);
-  --divider: rgba(255, 255, 255, 0.05);
-
-  /* === Glows & Effects === */
-  --glow-sun: rgba(255, 107, 53, 0.4);
-  --glow-tech: rgba(79, 131, 202, 0.3);
-  --glass-overlay: rgba(255, 255, 255, 0.05); /* Futuristic glass effect */
-  
-  /* Brand Colors */
-
-  --sun-core: #FF3E3E;             /* Red-Hot Core */
-  --sun-inner-glow: #FF6B35;       /* Orange Plasma */
-  --sun-outer-glow: #FFD166;       /* Solar Flare Yellow */
-
-  --tech-panel: ;           /* Matte Black Alloy */
-  --tech-accent: #4F83CA;          /* High-Energy Blue */
-  --tech-hologram: #7DB9E8;        /* Holo-Cyan Glow */
-  --tech-wire: #F2E205;            /* Energy Conduit Gold */
-
-  --primary: ;
-  
-  --primary-light: ;
-  --primary-dark: ;
-
-  --secondary: ;
-  
-  --secondary-light: ;
-  --secondary-dark: ;
-
-  --tertiary: ;
-
-  --tertiary-light: ;
-  --tertiary-dark: ;
-
-  --accent: ;
-
-  --accent-light: ;
-  --accent-dark: ;
-
-  /* Feedback colors */
-  
-    --success: #7ED321;              /* Green = System Stable */
-    --warning: #FFA700;              /* Warning / Caution Mode */
-    --error: #FF3B30;                /* Error / Critical Alert */
-    --info: ;
-
-    /* Typography */
+/* Typography */
 
   --text-primary: #FFFFFF;
   --text-secondary: #AAAAAA;
@@ -73,16 +12,49 @@
   --text-link: ;
   --text-link-hover: ;
 
+
+/* Backgrounds/Surfaces */
+  
+  --bg-primary: #0A0A10;
+  --bg-secondary: #12121D;
+  --bg-tertiary: #1C1C27;
+  --bg-hover: ;
+  --bg-inverted: ;
+  --bg-overlay: ;
+
+
+  /* Borders & Dividers */
+
+  --border: rgba(255, 255, 255, 0.1);
+  --divider: rgba(255, 255, 255, 0.05);
+
+  /* Brand Colors */
+
+   --primary: #FFD166; 
+  --primary-light: ;
+  --primary-dark: ;
+
+  --secondary: #4F83CA; 
+  --secondary-light: ;
+  --secondary-dark: ;
+
+  --tertiary: #FF6B35;   
+  --tertiary-light: ;
+  --tertiary-dark: ;
+
+/* Feedback colors */
+  
+  --success: #7ED321;              /* Green = System Stable */
+  --warning: #FFA700;              /* Warning / Caution Mode */
+  --error: #FF3B30;                /* Error / Critical Alert */
+  --info: ;
+
 /* Interactive Elements */
 
     /* === Hover States & Variants === */
   --primary-hover: #ca3232;
   --secondary-hover: #3D6BC0;
-  --accent-hover: #E05A2C;
-  /* === UI & Interactive Elements === */
-  --primary: #FFD166;              /* Main UI Highlight (Solar Yellow) */
-  --secondary: #4F83CA;            /* Secondary UI (Plasma Blue) */
-  --accent: #FF6B35;               /* Accent UI (Flame Orange) */
+  --tertiary-hover: #E05A2C;
 
   --btn-bg: var(--bg-primary);
   --btn-text: var(--primary);
@@ -95,9 +67,6 @@
   --input-border: var(--color-gray-300);
   --input-focus: var(--color-primary);
   --input-placeholder: var(--color-gray-400);
-
-
-  
 }
 
 .btn {
@@ -126,8 +95,6 @@
   --tech-hologram: #7DB9E8;
 }
 
-
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -137,6 +104,6 @@
 
 body {
   background: var(--bg-primary);
-  color: var(--foreground);
+  color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
 }
