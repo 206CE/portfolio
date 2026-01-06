@@ -1,4 +1,5 @@
 {
+  "homepage": "https://206CE.github.io/portfolio",
   "name": "template",
   "version": "0.3.0-alpha+000",
   "private": true,
@@ -6,7 +7,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
@@ -29,6 +31,7 @@
     "@types/react-dom": "^19.2.3",
     "eslint": "^9",
     "eslint-config-next": "^16.1.1",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
