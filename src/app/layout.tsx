@@ -2,33 +2,28 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "206ce",
-  description: "Computer technology for the future.",
-  metadataBase: new URL("https://206ce.github.io"),
+  title: "206_CE Services",
+  description: "Everything Simplified",
   openGraph: {
-    type: "website",
-    url: "https://206ce.github.io",
-    title: "206_CE Technologies",
-    description: "Scalable technologies",
-    siteName: "206_CE",
+    title: "206_CE Services",
+    description: "Everything Simplified",
+    url: "https://206CE.github.io/",
+    siteName: "206_CE Services",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://206CE.github.io/Logo/logo_res_OG.png",
         width: 1200,
         height: 630,
-        alt: "206CE Banner",
       },
     ],
-    
+    locale: "en_ZA",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    site: "@", // Your Twitter handle
-    description: "Website development",
-    images: ["/og-image.jpg"],
-  },
-  icons: {
-    icon: "/Logo.png",
+    title: "206_CE Services",
+    description: "Everything Simplified",
+    images: "https://206CE.github.io/Logo/logo_res_OG.png",
   },
 };
 
@@ -36,54 +31,42 @@ export const metadata: Metadata = {
 import "./globals.css";
 
 /* FONT */
-import { Syne_Mono } from "next/font/google";
-import { Space_Mono } from "next/font/google";
+import { Audiowide } from "next/font/google";
 
-const syne = Syne_Mono({
-  subsets: ["latin"],
-  variable: "--font-syne",
+const AudioW = Audiowide({
   weight: "400",
-});
-
-const space = Space_Mono({
   subsets: ["latin"],
-  variable: "--font-space",
-  weight: "400",
-});
+})
 
 /* LAYOUT */
-import Container from "@/Components/Layout/Container";
+import Container from "../Components/Container";
+
 
 /* CONTENT */
-import Logo from "../Components/Content/Logo";
-import ContactInfo from "@/Components/Content/ContactInfo";
+import Logo from "../Components/Logo";
+import ContactInfo from "../Components/ContactInfo";
 
 /* CTA */
-import Cta from "../Components/Ctas/Cta";
+import Cta from "../Components/_Cta";
 
 /* NAV */
-import Navigation from "../Components/Nav/Navigation";
-import Social from "../Components/Nav/Social";
+import Navigation from "../Components/Navigation";
+import Social from "../Components/Social";
 
 const nItems = [
   { label: "Home", href: "/" },
   {
-    label: "Aspects",
-    dropdown: [
-      { label: "Secure", href: "/aspects/secure" },
-      { label: "Expand", href: "/aspects/expand" },
-      { label: "Gather", href: "/aspects/gather" },
-      { label: "Adapt", href: "/aspects/adapt" },
-    ],
+    label: "Services", href: "/services"
   },
-  { label: "Philosophy", href: "/philosophy" },
-  { label: "Customers", href: "/customers" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+
 ];
 
 const social = [
   "https://www.linkedin.com/in/jaco-botha-886b7b95/",
   "https://www.facebook.com/jaco.botha.12139",
+  "https://github.com/206CE",
 ];
 
 
@@ -95,14 +78,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${syne.className} ${space.className} antialiased`}>
+      <body className={`${AudioW.className} antialiased`}>
         {/*BACKGROUND*/}
         <div className="bg-(--background)"></div>
 
         {/* HEADER */}
         <Container
           as={"header"}
-          className="flex flex-row fixed w-full left-0 gap-6 justify-between items-center bg-(--bg-primary) mb-20"
+          className="flex flex-row fixed w-full left-0 gap-6 justify-between items-center bg-(--bg-primary) mb-20 z-50"
         >
           {/* LOGO */}
           <Logo text="CE_206..." size={50} imagePath="/Logo.png" />
@@ -115,7 +98,7 @@ export default function RootLayout({
 
           {/* CTA */}
           <Cta
-            ctas={[{ label: "Get a Quote", href: "/contact" }]}
+            ctas={[{ label: "Get in Touch", href: "/contact" }]}
             itemClassFormat="btn hidden lg:block text-1xl p-2   mr-10 font-bold border"
           />
 

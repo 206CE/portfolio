@@ -96,7 +96,7 @@ export default function Contacts() {
           />
         </fieldset>
         <button
-          className="btn"
+          className="btn cursor-pointer"
           type="submit"
         >
           Send

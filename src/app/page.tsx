@@ -1,20 +1,18 @@
-
 /* LAYOUT */
 
-
 /* CTA */
-import Hero from "../Components/Ctas/Hero";
-
+import Hero from "../Components/Hero";
 
 /* CONTENT */
-import FeatureList from "@/Components/Content/FeatureList";
-import About from "@/Components/Content/About";
-import Testify from "@/Components/Content/Testify";
-import Faq from "@/Components/Content/Faq";
+
+import Faq from "../Components/Faq";
 
 /* COMPONENTS */
 
-
+/* OTHER PAGES */
+import AboutPage from "./about/page";
+import Services from "./services/page";
+import Contact from "./contact/page";
 
 export default function Home() {
   return (
@@ -22,23 +20,24 @@ export default function Home() {
       <section className="justify-center">
         {/* HERO */}
         <Hero
-          title="CE  206"
+          title="CE_206"
           tagline="One number, many forms."
           ctas={[{ label: "Contact Us", href: "/contact" }]}
           itemformat=" btn text-2xl p-2  mr-10 font-bold border"
-          imageSrc="/Logo.png"
+          imageSrc=""
           imageSize={500}
           imageAlt="Picture of Logo, a hexa-devided star."
         />
       </section>
-      {/* FEATURES : Our Content*/}
+      
+      {/* FEATURES : Our Content
       <section>
         <FeatureList
           heading="Our Content"
           subheading="We strive for completeness..."
           features={[
             {
-              title: "Secure",
+              title: "Projects",
               description: "The stuff we have",
               icon: "",
               imageUrl: "/The_Human_Way/Protector_Dark.png",
@@ -73,9 +72,13 @@ export default function Home() {
           layout="grid"
           columns={4}
         />
+      </section>*/}
+      {/* SERVICES /services/page.tsx*/}
+      <section>
+        <Services />
       </section>
       {/* ABOUT  /about/page.tsx */}
-
+      <AboutPage />
       {/* PORTFOLIO */}
       {/* TESTIMONIALS /customers/page.tsx*/}
 
@@ -89,6 +92,7 @@ export default function Home() {
           { question: "Question2", answer: "Answer2" },
         ]}
       />
+      <Contact />
     </main>
   );
 }

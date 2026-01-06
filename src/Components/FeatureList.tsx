@@ -5,7 +5,7 @@
 
 import { ReactNode } from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 
 export type FeatureItem = {
   title: string;
@@ -61,7 +61,7 @@ export default function FeatureList({
         {features.map((feature, idx) => (
           <div
             key={idx}
-            className="flex flex-col items-start p-6 border border-(--border)  shadow-sm hover:shadow-lg transition-shadow duration-300 bg-(--bg-secondary)"
+            className="flex flex-col items-center p-6 border border-(--border)  shadow-sm hover:shadow-lg transition-shadow duration-300 bg-(--bg-secondary)"
           >
             {feature.icon && (
               <div className="mb-4 text-(--text-primary) text-3xl">
@@ -82,12 +82,12 @@ export default function FeatureList({
               {feature.description}
             </p>
             {feature.link && (
-              <a
+              <Link
                 href={feature.link.href}
                 className="btn mt-auto font-medium b"
               >
                 {feature.link.label} 
-              </a>
+              </Link>
             )}
           </div>
         ))}
