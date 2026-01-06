@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+
+:root {
+  /* Lighter Celestial Typography */
+  --text-primary: #1A1A2E;     /* Dark Navy instead of pure black */
+  --text-secondary: #4A4A6A;
+  --text-tertiary: #8E8EA0;
+
+  /* Backgrounds: Shifted to "Nebula White" & Soft Lavender */
+  --bg-primary: #F0F2F9;       /* Soft cool-white */
+  --bg-secondary: #FFFFFF;     /* Pure white for panels */
+  --bg-tertiary: #E1E5F2;
+
+  /* Borders: Using soft blue-ish tints */
+  --border: rgba(79, 131, 202, 0.2);
+  --divider: rgba(0, 0, 0, 0.05);
+
+  /* Brand Colors: "Supernova" Palette (Lighter golds & cyans) */
+  --primary: #F9C74F;          /* Bright Golden Star */
+  --secondary: #4CC9F0;        /* Cyan Plasma */
+  --tertiary: #F8961E;         /* Solar Flare Orange */
+
+  /* Celestial Glows (Increased spread, lower opacity for "light mode") */
+  --glow-primary: rgba(249, 199, 79, 0.3);
+  --glow-secondary: rgba(76, 201, 240, 0.3);
+  --glow-error: rgba(255, 107, 107, 0.4);
+
+  /* Hover States */
+  --primary-hover: #E9B844;
+  --secondary-hover: #43B5D8;
+  
+  /* Star specific colors */
+  --sun-core: #FFF9E6;
+  --sun-inner-glow: rgba(249, 199, 79, 0.6);
+  --sun-outer-glow: rgba(76, 201, 240, 0.2);
+}
+
+/* Base Styles */
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  
+  /* "Stellar Fog" Effect: Using a light radial gradient instead of scanlines */
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(76, 201, 240, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(249, 199, 79, 0.1) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+/* --- Refined Tech Elements --- */
+
+.tech-panel {
+  background: rgba(255, 255, 255, 0.7); /* Frosted glass */
+  border: 1px solid white;
+  backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.05), 
+    inset 0 0 20px white;
+}
+
+/* Logo Area: Now feels like a bright white-hot star */
+.logo-container {
+  background: white;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 20px var(--sun-core),
+    0 0 40px var(--sun-inner-glow),
+    0 0 60px var(--sun-outer-glow);
+  transition: all 0.5s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 30px var(--sun-core),
+    0 0 60px var(--sun-inner-glow),
+    0 0 90px var(--sun-outer-glow);
+  filter: brightness(1.1);
+}
