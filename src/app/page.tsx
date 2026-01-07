@@ -23,13 +23,13 @@ export default function Home() {
           title="CE_206"
           tagline="One number, many forms."
           ctas={[{ label: "Contact Us", href: "/contact" }]}
-          itemformat=" btn text-2xl p-2  mr-10 font-bold border"
+          itemformat=" btn text-xl font-bold border"
           imageSrc=""
           imageSize={500}
           imageAlt="Picture of Logo, a hexa-devided star."
         />
       </section>
-      
+
       {/* FEATURES : Our Content
       <section>
         <FeatureList
@@ -78,7 +78,9 @@ export default function Home() {
         <Services />
       </section>
       {/* ABOUT  /about/page.tsx */}
-      <AboutPage />
+      <div className="lg:block hidden">
+        <AboutPage />
+      </div>
       {/* PORTFOLIO */}
       {/* TESTIMONIALS /customers/page.tsx*/}
 
@@ -86,12 +88,12 @@ export default function Home() {
       {/* STATS/MILESTONES */}
       {/* VIDEO/MEDIA */}
       {/* FAQ */}
-      <Faq
+      {/*<Faq
         faqs={[
           { question: "Question1", answer: "Answer1" },
           { question: "Question2", answer: "Answer2" },
         ]}
-      />
+      />*/}
       <Contact />
     </main>
   );

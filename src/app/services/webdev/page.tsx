@@ -1,6 +1,10 @@
 import Cards from "../../../Components/Cards";
 import Quote from "../../../Components/Quote";
 import FeatureList from "../../../Components/FeatureList";
+import BackButton from "../../../Components/BackNav";
+import Container from "../../../Components/Container";
+
+
 const customers = [
   {
     id: 1,
@@ -31,9 +35,9 @@ const customers = [
   },
 ];
 
-export default function Customers() {
+export default function WebDevelopment() {
   return (
-    <div>
+    <Container as={"section"} className="">
       {/* Testimonials Section */}
       <div className="flex justify-center">
         <Quote
@@ -92,6 +96,7 @@ export default function Customers() {
           />
         </div>
       </section>
-    </div>
+      <BackButton />
+    </Container>
   );
 }

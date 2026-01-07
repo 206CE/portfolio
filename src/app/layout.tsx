@@ -36,11 +36,10 @@ import { Audiowide } from "next/font/google";
 const AudioW = Audiowide({
   weight: "400",
   subsets: ["latin"],
-})
+});
 
 /* LAYOUT */
 import Container from "../Components/Container";
-
 
 /* CONTENT */
 import Logo from "../Components/Logo";
@@ -56,20 +55,24 @@ import Social from "../Components/Social";
 const nItems = [
   { label: "Home", href: "/" },
   {
-    label: "Services", href: "/services"
+    label: "Services",
+    dropdown: [
+      { label: "Web Development", href: "/services/webdev" },
+      { label: "Service Management", href: "/services/management" },
+      { label: "Training", href: "/services/training" },
+    ],
   },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
-
 ];
 
 const social = [
   "https://www.linkedin.com/in/jaco-botha-886b7b95/",
   "https://www.facebook.com/jaco.botha.12139",
   "https://github.com/206CE",
+  "https://discord.com/users/1337346807100866580",
+  "https://x.com/206Roaches",
 ];
-
-
 
 export default function RootLayout({
   children,
@@ -93,7 +96,7 @@ export default function RootLayout({
           {/* NAV */}
           <Navigation
             items={nItems}
-            itemClassName="btn p-4 md:p-2 md:text-xl lg:text-2xl"
+            itemClassName="btn p-4 md:p-2 text-2xl lg:text-3xl b-(--bg-primary) z-10"
           />
 
           {/* CTA */}
@@ -109,7 +112,7 @@ export default function RootLayout({
           {/* CART */}
 
           {/* LIGHT/DARK */}
-          
+
           {/* LANG */}
           {/* ACCESSABILTY */}
 
@@ -118,7 +121,7 @@ export default function RootLayout({
         <div className="p-10"></div>
         {children}
         {/* FOOTER */}
-        <Container as={"footer"}>
+        <Container as={"footer"} className="mt-10">
           {/* PRIVACY */}
           {/* TERMS */}
           {/* TRUST (badges)*/}

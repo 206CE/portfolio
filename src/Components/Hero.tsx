@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({
   itemformat
 }) => {
   return (
-    <section className="p-5">
+    <section className="p-5 bg-(--bg-secondary) m-10 border-(--border) border-2">
       <div className="">
         {/* Optional image display */}
         <div className=" flex justify-center">
@@ -65,7 +65,7 @@ const Hero: React.FC<HeroProps> = ({
             {tagline}
           </h4>
         )}
-          <ul className="mt-6 flex justify-center gap-4 flex-wrap">
+          <ul className="mt-6 flex justify-center  flex-wrap">
             {(ctas ?? []).map((cta, idx) => (
               <Link key={idx} href={cta.href} className="transition duration-300 transform hover:scale-110">
                 <li className={`px-6 py-2  text-(--text-primary) ${itemformat}`}>

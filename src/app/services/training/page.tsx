@@ -1,5 +1,8 @@
 import FeatureList from "../../../Components/FeatureList";
 import Container from "../../../Components/Container";
+import BackButton from "../../../Components/BackNav";
+
+
 export default function Adapt() {
   return (
     <Container as={"section"} className="">
@@ -30,6 +33,8 @@ export default function Adapt() {
           },
         ]}
       />
+      <BackButton />
+      {/*
       <section>
         <h1>Adapt</h1>
         <h2>Level of importance of adapting</h2>
@@ -43,7 +48,7 @@ export default function Adapt() {
           <li>Computer & Digital Networks</li>
           <li>Cybersecurity & Data Privacy</li>
         </ol>
-      </section>
+      </section>*/}
     </Container>
   );
 }

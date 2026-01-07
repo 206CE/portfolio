@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* OPTIONS FOR SSG */
-  output: "export",
+  /*output: "export",*/
   /*trailingSlash: true,*/
   images: {
     unoptimized: true,

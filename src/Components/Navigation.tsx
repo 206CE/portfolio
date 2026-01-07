@@ -35,7 +35,7 @@ export default function Navigation({ items, itemClassName = "" }: NavigationProp
     document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
 
-  const commonLinkClass = `flex ${itemClassName}`;
+  const commonLinkClass = `flex  ${itemClassName}`;
 
   const renderItem = (item: NavItem, closeOnClick = false) =>
     item.dropdown ? (
@@ -53,7 +53,7 @@ export default function Navigation({ items, itemClassName = "" }: NavigationProp
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <MenuItems className="absolute z-50  w-max cursor-pointer">
+          <MenuItems className="absolute z-10  w-max cursor-pointer">
             {item.dropdown.map((drop) => (
               <MenuItem key={drop.label}>
                 <Link
@@ -93,11 +93,11 @@ export default function Navigation({ items, itemClassName = "" }: NavigationProp
 
       {/* Hamburger */}
       <button
-        className={`md:hidden fixed top-4 right-4 z-10 p-2 cursor-pointer ${commonLinkClass}`}
+        className={`md:hidden fixed top-0 right-0 z-10 p-2 cursor-pointer bg-(--bg-primary) ${commonLinkClass}`}
         onClick={() => setOpen(!open)}
         aria-label="Toggle menu"
       >
-        {open ? <FaTimes size={24} /> : <FaBars size={24} />}
+        {open ? <FaTimes size={12} /> : <FaBars size={12} />}
       </button>
 
       {/* Overlay */}
@@ -107,11 +107,11 @@ export default function Navigation({ items, itemClassName = "" }: NavigationProp
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 z-50 w-64 h-full transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-2 right-0 z-50 w-2/3 mr-2 p-2 h-full transform transition-transform duration-300 ease-in-out ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex flex-col gap-4 p-6 pt-16">
+        <div className="flex flex-col gap-2   bg-(--bg-primary)">
           {items.map((item) => renderItem(item, true))}
         </div>
       </div>

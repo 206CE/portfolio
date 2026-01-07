@@ -4,7 +4,7 @@ import About from "../../Components/About";
 
 export default function AboutPage() {
   return (
-    <section className="text-(--primary) flex flex-col text-2xl p-10 m-8  items-center justify-center gap-15">
+    <section className="text-(--primary) flex flex-col text-2xl  p-5   items-center justify-center ">
       <About
         companyName="CE_206"
         tagline="One number, many forms."

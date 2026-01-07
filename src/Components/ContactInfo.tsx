@@ -19,7 +19,7 @@ interface ContactInfoProps {
 
 const ContactInfo: React.FC<ContactInfoProps> = ({ cellphone, email }) => {
   return (
-    <div className=" flex flex-row justify-between text-(--text-secondary) font-semibold m-5">
+    <div className=" flex flex-wrap justify-between text-(--text-secondary) font-semibold m-5">
       {cellphone && (
         <div className="flex flex-row items-center space-x-2">
           <MdPhone className="text-md text-blue-500" />

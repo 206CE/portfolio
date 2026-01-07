@@ -77,7 +77,7 @@ export default function About({
       {/* Core Values */}
       <section className="max-w-4xl mx-auto px-6 py-10">
         <h3 className="text-2xl font-semibold mb-4">Our Core Values</h3>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="lg:list-disc space-y-10">
           {values.map((value, index) => (
             <li key={index}>{value}</li>
           ))}
