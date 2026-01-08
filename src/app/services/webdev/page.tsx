@@ -1,7 +1,7 @@
 import Cards from "../../../Components/Cards";
 import Quote from "../../../Components/Quote";
 import FeatureList from "../../../Components/FeatureList";
-import BackButton from "../../../Components/BackNav";
+
 import Container from "../../../Components/Container";
 
 
@@ -96,7 +96,6 @@ export default function WebDevelopment() {
           />
         </div>
       </section>
-      <BackButton />
     </Container>
   );
 }

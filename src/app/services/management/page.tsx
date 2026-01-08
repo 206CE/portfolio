@@ -1,6 +1,6 @@
 import Container from "../../../Components/Container";
 import FeatureList from "../../../Components/FeatureList";
-import BackButton from "../../../Components/BackNav";
+
 export default function ServiceManagement() {
   return (
     <Container as={"section"} className="">
@@ -25,7 +25,7 @@ export default function ServiceManagement() {
           },
         ]}
       />
-      <BackButton />
+
       {/*<section className="text-(--text-primary)">
         <h1 className="text-(--text-primary)">Security</h1>
         <h2>Level of importance of security:</h2>

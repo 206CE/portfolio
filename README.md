@@ -1,6 +1,10 @@
 
 Responsiveness:
 
+None Responsive:
+
+Navigation:  760-1230 & DropDown menu background transparent, Menu Length short?
+
 sm: 640
 md: 768
 lg: 1024

@@ -51,6 +51,7 @@ import Cta from "../Components/_Cta";
 /* NAV */
 import Navigation from "../Components/Navigation";
 import Social from "../Components/Social";
+import BackButton from "../Components/BackNav";
 
 const nItems = [
   { label: "Home", href: "/" },
@@ -96,14 +97,14 @@ export default function RootLayout({
           {/* NAV */}
           <Navigation
             items={nItems}
-            itemClassName="btn p-4 md:p-2 text-2xl lg:text-3xl b-(--bg-primary) z-10"
+            itemClassName="btn p-4 md:p-2 text-4xl xlg:text-2xl b-(--bg-primary) z-10"
           />
 
           {/* CTA */}
-          <Cta
+          {/*<Cta
             ctas={[{ label: "Get in Touch", href: "/contact" }]}
-            itemClassFormat="btn hidden lg:block text-1xl p-2   mr-10 font-bold border"
-          />
+            itemClassFormat="btn hidden lg:block text-lg p-2   mr-10 font-bold border"
+          />*/}
 
           {/* SEARCH */}
 
@@ -122,6 +123,7 @@ export default function RootLayout({
         {children}
         {/* FOOTER */}
         <Container as={"footer"} className="mt-10">
+          <BackButton />
           {/* PRIVACY */}
           {/* TERMS */}
           {/* TRUST (badges)*/}

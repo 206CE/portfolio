@@ -1,6 +1,6 @@
 import FeatureList from "../../../Components/FeatureList";
 import Container from "../../../Components/Container";
-import BackButton from "../../../Components/BackNav";
+
 
 
 export default function Adapt() {
@@ -33,7 +33,7 @@ export default function Adapt() {
           },
         ]}
       />
-      <BackButton />
+
       {/*
       <section>
         <h1>Adapt</h1>

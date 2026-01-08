@@ -23,7 +23,7 @@ interface CtaProps {
 
 const Cta: React.FC<CtaProps> = ({ ctas, itemClassFormat }) => {
   return (
-    <div className="">
+    <div className="flex flex-nowrap">
       <ul>
         {
           ctas.map((cta, index) => (
