@@ -1,3 +1,12 @@
+BUGS:
+
+layout.tsx: 
+   <Navigation> 
+      not responsive: 760-1230 
+      Drop down menu:
+         Transparent
+         Small screen x-size smaller?
+
 
 Responsiveness:
 
